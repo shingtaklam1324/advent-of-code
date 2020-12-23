@@ -4,6 +4,12 @@ import Data.List.Utils
 import Data.List.Split
 import Data.List
 
+{-
+For Part 1, we get the keys from each of the entries, and then sort them and
+check whether they match one of the two lists (ie ignoring `cid`). If we
+assume that all of the keys are correct, then this solution is overcomplicated,
+as we don't need to sort, and counting would suffice.
+-}
 day4part1 :: IO ()
 day4part1 = do
     s <- readFile "inputs/day4.txt"
