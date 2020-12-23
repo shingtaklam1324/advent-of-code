@@ -1,4 +1,4 @@
-module Day7 where
+module Day7 (day7part1, day7part2) where
 
 import qualified Data.Map.Strict as Map
 import Data.List.Split
