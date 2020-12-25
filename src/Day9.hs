@@ -2,9 +2,17 @@ module Day9 where
 
 import Data.List.Utils
 
+{-
+Check if a number is the sum of two elements in a list. We do this by for each
+`x` in the list whether `n - x` is in the list, and that we have not chosen the
+same number twice.
+-}
 isSumPair :: (Eq a, Num a) => a -> [a] -> Bool
 isSumPair n l = any (\x -> n - x `elem` l && not (2 * x == n && countElem x l == 1)) l
 
+{-
+To find the first number which is not the sum of the previous 25
+-}
 findFirstNotSum :: [Int] -> Int
 findFirstNotSum l = aux (take 25 l) (drop 25 l)
   where
